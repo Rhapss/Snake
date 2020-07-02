@@ -5,8 +5,8 @@
 class Point
 {
 public:
-	int x;
-	int y;
+	int x = 0;
+	int y = 0;
 	char sym;
 
 	Point()
@@ -46,6 +46,10 @@ public:
 		}
 	}
 	
+	bool IsHit(Point p)
+	{
+		return p.x == this->x && p.y == this->y;
+	}
 	void gotoxy(short x, short y)
 	{
 		HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);

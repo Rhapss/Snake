@@ -63,5 +63,20 @@ public:
 			}
 		}
 	}
+
+	bool Eat(Point food)
+	{
+		Point head = GetNextPoint();
+		if (head.IsHit(food))
+		{
+			food.sym = head.sym;
+			pList.push_back(food);
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 };
 

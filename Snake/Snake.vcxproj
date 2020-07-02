@@ -141,20 +141,26 @@
   <ItemGroup>
     <ClCompile Include="Direction.cpp" />
     <ClCompile Include="Figure.cpp" />
+    <ClCompile Include="FoodCreator.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HorizontalLine.cpp" />
     <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Random.cpp" />
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="VerticalLine.cpp" />
+    <ClCompile Include="Walls.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Direction.h" />
     <ClInclude Include="Figure.h" />
+    <ClInclude Include="FoodCreator.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="HorizontalLine.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="Random.h" />
     <ClInclude Include="Snake.h" />
     <ClInclude Include="VerticalLine.h" />
+    <ClInclude Include="Walls.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

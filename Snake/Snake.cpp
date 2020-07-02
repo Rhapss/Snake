@@ -6,12 +6,15 @@
 #include <vector>
 #include "conio.h"
 #include "Snake.h"
+#include "FoodCreator.h"
+#include <ctime>
 using namespace std;
 
 
 
 int main()
 {
+	srand(time(NULL));
 	system("mode con cols=51 lines=21");
 
 	HorizontalLine Top (0, 50, 0, '#');
@@ -26,11 +29,26 @@ int main()
 		Point p(4, 5, '0');
 		Snake snake(p, 4, RIGHT);
 		snake.DrawLine();
+
+		FoodCreator foodCreator(50, 20, '$'); 
+		Point food = foodCreator.CreateFood();
+		food.DrawPoint(); 
 		while (true)
 		{
+			
+			if (snake.Eat( food ))
+			{
+				food = foodCreator.CreateFood();
+				food.DrawPoint();
+
+			}
+			else
+			{
+				snake.Move();
+			}
+		
+			Sleep(150);
 			snake.HandleKey();
-			snake.Move();
-			Sleep(300);
 		}
 	
 
